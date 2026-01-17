@@ -13,6 +13,7 @@ import {
   LayoutList,
   LayoutGrid,
   Bookmark,
+  ShoppingBag,
 } from "lucide-react";
 import Img1 from "../../assets/img/img1.png";
 import Img2 from "../../assets/img/img2.png";
@@ -24,8 +25,148 @@ import Img7 from "../../assets/img/img7.png";
 import Img8 from "../../assets/img/img8.png";
 import Img9 from "../../assets/img/img9.png";
 import Img10 from "../../assets/img/img10.png";
+import C1 from "../../assets/img/c1.png";
+import C2 from "../../assets/img/c2.png";
+import C3 from "../../assets/img/c3.png";
+import C4 from "../../assets/img/c4.png";
+import C5 from "../../assets/img/c5.png";
+import C6 from "../../assets/img/c6.png";
+import C7 from "../../assets/img/c7.png";
+import C8 from "../../assets/img/c8.png";
+import C9 from "../../assets/img/c9.png";
+import C10 from "../../assets/img/c10.png";
+import C11 from "../../assets/img/c11.png";
+import C12 from "../../assets/img/c12.png";
+import C13 from "../../assets/img/c13.png";
+import C14 from "../../assets/img/c14.png";
+import C15 from "../../assets/img/c15.png";
+import C16 from "../../assets/img/c16.png";
 
-// Kategoriyalar (o'zgarishsiz)
+
+const products = [
+  {
+    id: 1,
+    code: "#02.02.02.01-1000",
+    title:
+      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
+    image: C1,
+    isPrimary: false, 
+  },
+  {
+    id: 2,
+    code: "#02.02.02.01-1000",
+    title: "Глина бентонитовая",
+    image: C2,
+    isPrimary: false,
+  },
+  {
+    id: 3,
+    code: "#02.02.02.01-1000",
+    title:
+      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
+    image: C3,
+    isPrimary: false,
+  },
+  {
+    id: 4,
+    code: "#01.01.01.01-0002",
+    title:
+      "Изделия с армирующими материалами на основе стеклоткани, пришитыми к стеклоизоляционному слою марки",
+    image: C4,
+    isPrimary: false,
+  },
+  {
+    id: 5,
+    code: "#02.02.02.01-1000",
+    title:
+      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
+    image: C5,
+    isPrimary: false,
+  },
+  {
+    id: 6,
+    code: "#02.02.02.01-1000",
+    title: "Глина бентонитовая",
+    image: C6,
+    isPrimary: false,
+  },
+  {
+    id: 7,
+    code: "#02.02.02.01-1000",
+    title:
+      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
+    image: C7,
+    isPrimary: false,
+  },
+  {
+    id: 8,
+    code: "#02.02.02.01-1000",
+    title: "Изделия с армирующими материалами на основе стеклоткани...",
+    image: C8,
+    isPrimary: false,
+  },
+  {
+    id: 9,
+    code: "#02.02.02.01-1000",
+    title:
+      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
+    image: C9, 
+    isPrimary: false,
+  },
+  {
+    id: 10,
+    code: "#02.02.02.01-1000",
+    title: "Глина бентонитовая",
+    image: C10,
+    isPrimary: false,
+  },
+  {
+    id: 11,
+    code: "#02.02.02.01-1000",
+    title:
+      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
+    image: C11,
+    isPrimary: false,
+  },
+  {
+    id: 12,
+    code: "#01.01.01.01-0002",
+    title:
+      "Изделия с армирующими материалами на основе стеклоткани, пришитыми к стеклоизоляционному слою марки",
+    image: C12,
+    isPrimary: false,
+  },
+  {
+    id: 13,
+    code: "#02.02.02.01-1000",
+    title:
+      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
+    image: C13,
+    isPrimary: false,
+  },
+  {
+    id: 14,
+    code: "#02.02.02.01-1000",
+    title: "Глина бентонитовая",
+    image: C14,
+    isPrimary: false,
+  },
+  {
+    id: 15,
+    code: "#02.02.02.01-1000",
+    title:
+      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
+    image: C15,
+    isPrimary: false,
+  },
+  {
+    id: 16,
+    code: "#02.02.02.01-1000",
+    title: "Изделия с армирующими материалами на основе стеклоткани...",
+    image: C16,
+    isPrimary: false,
+  },
+];
 const categories = [
   {
     id: 1,
@@ -79,74 +220,9 @@ const categories = [
   },
 ];
 
-// Mahsulotlar (Ko'paytirildi va rasmga moslashtirildi)
-const products = [
-  {
-    id: 1,
-    code: "#02.02.02.01-1000",
-    title:
-      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
-  },
-  {
-    id: 2,
-    code: "#02.02.02.01-1000",
-    title:
-      "Изделия с армирующими материалами на основе стеклоткани, пришитыми к стеклоизоляционному слою марки",
-  },
-  {
-    id: 3,
-    code: "#02.02.02.01-1000",
-    title:
-      "Изделия с армирующими материалами на основе стеклоткани, пришитыми к стеклоизоляционному слою марки",
-  },
-  {
-    id: 4,
-    code: "#02.02.02.01-1000",
-    title:
-      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
-  },
-  {
-    id: 5,
-    code: "#02.02.02.01-1000",
-    title:
-      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
-  },
-  {
-    id: 6,
-    code: "#02.02.02.01-1000",
-    title:
-      "Изделия с армирующими материалами на основе стеклоткани, пришитыми к стеклоизоляционному слою марки",
-  },
-  {
-    id: 7,
-    code: "#02.02.02.01-1000",
-    title:
-      "Изделия с армирующими материалами на основе стеклоткани, пришитыми к стеклоизоляционному слою марки",
-  },
-  {
-    id: 8,
-    code: "#02.02.02.01-1000",
-    title:
-      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
-  },
-  {
-    id: 9,
-    code: "#02.02.02.01-1000",
-    title:
-      "Изделия с армирующими материалами на основе стеклоткани, пришитыми к стеклоизоляционному слою марки",
-  },
-  {
-    id: 10,
-    code: "#02.02.02.01-1000",
-    title:
-      "Удаляемый герметизирующий компаунд для повторного сращивания кабеля",
-  },
-];
-
 export default function ConstructionCatalog() {
   return (
     <div className="min-h-screen bg-[#F4F7F9] relative font-sans text-slate-800 pb-16">
-      {/* Sidebar Tab */}
       <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 hidden sm:block">
         <button
           className="bg-blue-600 text-white py-4 px-1 rounded-l-md font-medium text-sm shadow-lg hover:bg-blue-700 transition"
@@ -157,7 +233,6 @@ export default function ConstructionCatalog() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        {/* Kategoriyalar Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {categories.map((cat) => (
             <div
@@ -172,7 +247,6 @@ export default function ConstructionCatalog() {
           ))}
         </div>
 
-        {/* Sarlavha va Filtrlash */}
         <div className="mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-slate-800 uppercase relative inline-block">
@@ -194,30 +268,60 @@ export default function ConstructionCatalog() {
           </div>
         </div>
 
-        {/* Mahsulotlar Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((item) => (
             <div
               key={item.id}
-              className="bg-white p-5 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition border border-transparent hover:border-blue-100 flex flex-col justify-between"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full border border-transparent hover:border-blue-100"
             >
+             
+              <div className="h-48 w-full mb-4 flex items-center justify-center overflow-hidden rounded-md bg-white">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-full w-full object-contain hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              
               <div className="flex justify-between items-start mb-3">
-                <span className="bg-blue-100 text-slate-700 text-xs font-bold px-2 py-1 rounded">
+                <span className="bg-blue-100 text-slate-700 text-[10px] sm:text-xs font-bold px-2 py-1 rounded">
                   {item.code}
                 </span>
                 <button className="text-slate-400 hover:text-blue-600 transition">
                   <Bookmark size={20} />
                 </button>
               </div>
-              <h3 className="text-sm font-semibold text-slate-700 leading-snug">
+
+              
+              <h3 className="text-sm font-bold text-slate-800 leading-snug mb-4 flex-grow line-clamp-3">
                 {item.title}
               </h3>
+
+            
+              <div className="flex gap-3 mt-auto">
+             
+                <button
+                  className={`flex-1 py-2.5 px-4 rounded-md font-semibold text-sm transition-colors border bg-white hover:bg-blue-600 hover:text-white
+                  ${
+                    item.isPrimary
+                      ? "bg-blue-500 text-white border-blue-500 hover:bg-blue-600"
+                      : "bg-white text-slate-700 border-slate-300 hover:border-blue-500 hover:text-blue-600"
+                  }`}
+                >
+                  Ko‘rish
+                </button>
+
+                
+                <button className="p-2.5 rounded-md border border-slate-300 text-slate-500 hover:text-blue-600 hover:border-blue-500 transition-colors bg-white">
+                  <ShoppingBag size={20} />
+                </button>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Pastki havola (Footer Link) */}
-        <div className="flex justify-center pb-8">
+        <div className="flex justify-center py-8">
           <a
             href="#"
             className="text-slate-500 font-medium text-sm sm:text-base border-b border-slate-400 pb-0.5 hover:text-blue-600 hover:border-blue-600 transition-colors"

@@ -25,7 +25,7 @@ import Img8 from "../../assets/img/img8.png";
 import Img9 from "../../assets/img/img9.png";
 import Img10 from "../../assets/img/img10.png";
 
-// Kategoriyalar (o'zgarishsiz)
+
 const categories = [
   {
     id: 1,
@@ -79,7 +79,7 @@ const categories = [
   },
 ];
 
-// Mahsulotlar (Ko'paytirildi va rasmga moslashtirildi)
+
 const products = [
   {
     id: 1,
@@ -146,7 +146,7 @@ const products = [
 export default function ConstructionCatalog() {
   return (
     <div className="min-h-screen bg-[#F4F7F9] relative font-sans text-slate-800 pb-16">
-      {/* Sidebar Tab */}
+      
       <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 hidden sm:block">
         <button
           className="bg-blue-600 text-white py-4 px-1 rounded-l-md font-medium text-sm shadow-lg hover:bg-blue-700 transition"
@@ -157,7 +157,7 @@ export default function ConstructionCatalog() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        {/* Kategoriyalar Grid */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {categories.map((cat) => (
             <div
@@ -172,7 +172,7 @@ export default function ConstructionCatalog() {
           ))}
         </div>
 
-        {/* Sarlavha va Filtrlash */}
+
         <div className="mb-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-slate-800 uppercase relative inline-block">
@@ -194,7 +194,7 @@ export default function ConstructionCatalog() {
           </div>
         </div>
 
-        {/* Mahsulotlar Grid */}
+      
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           {products.map((item) => (
             <div
@@ -216,7 +216,7 @@ export default function ConstructionCatalog() {
           ))}
         </div>
 
-        {/* Pastki havola (Footer Link) */}
+        
         <div className="flex justify-center pb-8">
           <a
             href="#"

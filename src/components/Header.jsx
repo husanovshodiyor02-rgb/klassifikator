@@ -175,7 +175,7 @@ const Header = () => {
             </button>
           </div>
 
-          <ul className="flex flex-col gap-6 text-lg font-medium mt-6 px-6 text-[#3d3d3d]">
+          <ul className="flex flex-col gap-2 text-lg font-medium mt-4 px-6 text-[#3d3d3d]">
             <li onClick={() => setOpen(false)}>
               <a href="/">Materiallar va buyumlar</a>
             </li>
@@ -198,7 +198,7 @@ const Header = () => {
               <a href="page7">Bo’limlar</a>
             </li>
           </ul>
-          <div className="flex flex-wrap items-center justify-center gap-5 bg-black p-2.5 rounded-xl m-5">
+          <div className="flex flex-wrap items-center justify-center gap-3 bg-black p-2.5 rounded-xl m-5">
             <FaSearch className="text-white size-5" />
             <img src={Ik1} alt="" className="w-9" />
             <img src={Ik2} alt="" className="w-9" />
